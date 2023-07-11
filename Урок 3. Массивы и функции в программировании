@@ -1,0 +1,105 @@
+// Задача 19: Напишите программу, которая принимает на
+// вход пятизначное число и проверяет, является ли оно
+// палиндромом.
+
+// Способ решения строкой:
+
+
+Console.WriteLine("Введите пятизначное число: ");
+int N = int.Parse (Console.ReadLine ());
+
+if (N >= 100000 || N <= 10000) 
+{
+    Console.WriteLine ("Данные введены неверно");
+    return;
+}
+
+string str = N.ToString();
+if (str[1] == str [5] & str[2] == str[4]) 
+{
+    Console.WriteLine ("Число является палиндромом");
+}
+else
+
+{
+    Console.WriteLine ("Число является палиндромом");
+}
+
+
+// Математический способ:
+
+Console.WriteLine("Введите пятизначное число: ");
+int N = int.Parse (Console.ReadLine ());
+
+if (N >= 100000 || N <= 10000) 
+{
+    Console.WriteLine ("Данные введены неверно");
+    return;
+}
+
+int c1 = N/10000;
+int c2 = N%10000/1000;
+int c3 = N%1000/100;
+int c4 = N%100/10;
+int c5 = N%10;
+
+if (c1 == c5 & c2 == c4) 
+{
+    Console.WriteLine ("Число является палиндромом");
+}
+else
+
+{
+    Console.WriteLine ("Число не является палиндромом");
+}
+
+
+
+
+
+
+
+
+// Задача 21: Напишите программу, которая принимает на
+// вход координаты двух точек и находит расстояние между
+// ними в 3D пространстве.
+
+Console.WriteLine ("Введите х1");
+int x1 = int.Parse (Console.ReadLine());
+Console.WriteLine ("Введите х2");
+int x2 = int.Parse (Console.ReadLine());
+Console.WriteLine ("Введите y1");
+int y1 = int.Parse (Console.ReadLine());
+Console.WriteLine ("Введите y2");
+int y2 = int.Parse (Console.ReadLine());
+int z1 = int.Parse (Console.ReadLine());
+Console.WriteLine ("Введите z1");
+int z2 = int.Parse (Console.ReadLine());
+Console.WriteLine ("Введите z2");
+double result = Math.Sqrt (Math.Pow (x2 - x1, 2) + Math.Pow (y2 - y1, 2) + Math.Pow (z2 - z1, 2));  
+Console.WriteLine (Math.Round (result, 2));
+
+
+
+
+
+
+// Задача 23: Напишите программу, которая принимает на
+// вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+Console.WriteLine ("Введите число");
+int N = int.Parse (Console.ReadLine());
+int i = 1;
+while (i <= N)
+{
+    Console.Write (Math.Pow (i, 3) + " ");
+    i++;
+}
+
+
+
+
+
+
+
+
