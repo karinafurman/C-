@@ -1,0 +1,100 @@
+
+// Задача 64: Задайте значения M и N. Напишите программу, которая выведет все
+// натуральные числа в промежутке от M до N.
+
+
+int numberNatRequery()
+{
+    int number = 0;
+    while (number < 1)
+    {
+        Console.WriteLine("Введите натуральное число:");
+        number = int.Parse(Console.ReadLine());
+    }
+    return number;
+}
+
+
+void print_interval_numbers(int min, int max)
+{
+    if (min <= max)
+    {
+        Console.Write(" " + min);
+        print_interval_numbers(min + 1, max);
+    }
+    else Console.Write(".");
+}
+
+int N = numberNatRequery();
+int M = numberNatRequery();
+
+int min_number = M;
+int max_number = N;
+if (N < M)
+{
+    min_number = N;
+    max_number = M;
+}
+Console.Write($"Натуральные числа от {min_number} до {max_number}:");
+print_interval_numbers(min_number, max_number);
+Console.WriteLine();
+Console.WriteLine();
+
+
+
+
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму
+// натуральных элементов в промежутке от M до N.
+
+/*
+Console.WriteLine("Введите первое число");
+int M = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите второе число");
+int N = int.Parse(Console.ReadLine());
+
+double rec(int M, int N)
+{
+    if (N < M)
+    {
+        Console.WriteLine("Это конец рекурсии!");
+        return 0; 
+    }
+    return N + rec(M, N - 1);
+}
+Console.WriteLine("Результат рекурсии: " + rec(M, N));
+*/
+
+
+
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью
+// рекурсии. Даны два неотрицательных числа m и n.
+
+
+/*
+int numberIntRequery()
+{
+    int number = -1;
+    while (number < 0)
+    {
+        Console.WriteLine("Введите натуральное число:");
+        number = int.Parse(Console.ReadLine());
+    }
+    return number;
+}
+
+int Ackerman(int m, int n)
+{
+    if (m == 0) return n + 1;
+    else if (m > 0 && n == 0) return Ackerman(m - 1, 1);
+    else if (m > 0 && n > 0) return Ackerman(m - 1, Ackerman(m, n - 1));
+    else return 0;
+}
+
+int m = numberIntRequery();
+int n = numberIntRequery();
+Console.WriteLine($"Функция Аккермана от [{m}, {n}]: {Ackerman(m, n)}.");
+*/
+
